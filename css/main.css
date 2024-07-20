@@ -1,0 +1,937 @@
+body{
+    background-color: #f7f7f7;
+    font-family: "century gothic";
+  }
+*{
+  scroll-behavior: smooth;
+}
+
+.white {
+      background:  linear-gradient(white,#e1caab);
+      position: fixed;
+      transition: 1s ease-out;
+      width: 100vw;
+
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0px 0px 20px red;
+}
+
+.navbar img{
+  max-width: 60px;
+  width: 100%;
+  height: auto;
+  transition: all 1s ease;
+
+}
+nav{
+  /* background:  linear-gradient(#e1caab,white); */
+  background:  linear-gradient(white,#e1caab);
+  transition: 1s ease-out;
+  box-shadow: 0px 0px 20px red;
+  z-index: 1000;
+  /* box-shadow: 0 0 50px black; */
+
+}
+nav a{
+  color: #101010;
+  text-align: center;
+}
+
+nav a:hover{
+  color: red;
+}
+.navbar-nav .active{
+  color: red;
+}
+.navbar-brand{
+  font-size: 30px;
+}
+@media screen and (max-width: 1086px) {
+  .navbar-brand img {
+    display: none!important;
+  }
+  nav{
+    background-color: #363636;
+  }
+}
+@media screen and (max-width: 992px) {
+  .bar{
+      display: none;
+  }
+}
+.bar{
+  width: 1px;
+  height: 40px;
+  background-color: #ddd;
+}
+.padpad{
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+}
+.padpad a {
+  text-decoration: none;
+}
+/* buttons */
+.top-btn{
+  position: fixed;
+  bottom: 20px;
+  padding:10px 30px;
+  right: 20px;
+  z-index: 1000000;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.5s ease-out;
+  border-radius: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.top-btn a{
+  color: white;
+  padding:10px 30px;
+  border-radius: 50px;
+  font-size: 14px;
+  transition: 1s ease-out;
+  text-decoration: none;
+}
+.top-btn:hover{
+  box-shadow: 0px 0px 10px RED;
+  background-color: white;
+}
+.top-btn a:hover{
+  background-color: #f7f7f7;
+  color:RED;
+}
+/*  */
+#header-wrapper{
+  position: relative;
+  padding: 0;
+  margin:0;
+  overflow: hidden;
+  height: 82vh;
+  /* background-image: linear-gradient(white, #b57b2f); */
+  background:url(../images/munisipyo.png), linear-gradient(#b57b2f,white);
+  background-repeat: no-repeat,no-repeat;
+  background-size:contain,cover;
+  background-position: bottom center,top;
+  background-attachment: fixed;
+  transition: 0.25s ease-out;
+
+}
+#searchbar{
+  margin: 20vh auto 10vh auto;
+  max-width: 500px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+.home-searchbar{
+  position: absolute;
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  height: 50px;
+}
+#searchbar form{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+#searchbar form input:hover{
+  box-shadow: 0 0 20px red;
+}
+#searchbar form input:active{
+  box-shadow: 0 0 20px red;
+}
+#searchbar input{
+  position: relative;
+  width: 100%;
+  height:40px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+#searchbar button{
+    position: absolute;
+    right: 5px;
+    border: 0;
+    background-color: #ffffff00;
+}
+#searchbar form button:hover{
+  cursor: pointer;
+
+  -ms-transform: scale(1.5); /* IE 9 */
+  transform: scale(1.5);
+}
+
+#other-links{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+#other-links a:hover{
+  box-shadow: 0 0 30px red;
+  text-decoration: none;
+  transition: 1s ease-out;
+  color:red;
+}
+#other-links p{
+  font-size:20px;
+}
+.home-box{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #000000ab;
+color:white;
+padding:40px 15px;
+}
+.home-box-1{
+  max-width: 200px;
+  width: 30%;
+}
+.home-box-2{
+  width:70%;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .home-box{
+  padding:15px 15px;
+  }
+  .home-box-1{
+    max-width: 100px;
+    width: 30%;
+  }
+  #other-links {
+        padding-top: 20px;
+  }
+  #header-wrapper{
+        height: 90vh;
+  }
+  .navbar-brand{
+    font-size: 20px;
+  }
+}
+
+#left{
+  position: absolute;
+  bottom: -13vh;
+  left:-10vw;
+  background-color: #f7f7f7;
+  height: 133px;
+  width: 60vw;
+  transform: rotate(5deg);
+  /* -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+
+}
+#right{
+  position: absolute;
+bottom: -13vh;
+right:-10vw;
+background-color: #f7f7f7;
+height: 133px;
+width: 60vw;
+transform: rotate(-5deg);
+  /* -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+
+}
+
+
+
+
+
+
+.text-center{
+  padding-top:10vh;
+  margin-bottom: 0;
+}
+
+
+
+/*  Tourism*/
+#tourism{
+  padding: 5vh 0;
+  background: url("../images/tourism-blur.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 50%;
+}
+#tourism .swiper-container {
+  width: 100%;
+  padding-top: 20px!important;
+  padding-bottom: 50px!important;
+}
+#tourism .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  background-color: #f7f7f7;
+  width: 100%;
+  box-shadow: 0px 0px 20px black;
+  height: fit-content;
+  padding: 0!important;
+}
+#tourism .swiper-container-coverflow .swiper-wrapper {
+  -ms-perspective: 1200px;
+  height: fit-content;
+}
+.thumbnails{
+  padding:15px;
+}
+.tourism-img{
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description{
+  max-height: 50px;
+  overflow: hidden;
+}
+.red-bg{
+  background-color: maroon;
+  color:white!important;
+}
+.red-bg:hover{
+  background-color: #f7f7f7;
+  color:black!important;
+}
+
+
+/* latest news */
+#latest-news, #festivities, #products {
+  padding: 5vh 0;
+}
+#latest-news button, #festivities button, #products button{
+  padding:0;
+}
+
+.latest-news-picture{
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px black;
+}
+.latest-news-picture:hover .latest-news-date-box, .latest-news-info-box  {
+  opacity: 1;
+}
+.latest-news-picture:hover .latest-news-info-box  {
+  opacity: 1;
+}
+.latest-news-date-box{
+  position: absolute;
+  background-color: #f7f7f7e0;
+  padding: 10px;
+  left: 10%;
+  top:30px;
+  opacity: 0.1;
+  transition: all .5s ease;
+}
+.latest-news-date-box p {
+  margin:0;
+}
+.latest-news-info-box{
+  position: absolute;
+  opacity: .1;
+  transition: all .5s ease;
+  background-color: #f7f7f7e0;
+  padding:10px;
+  bottom: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+.latest-news-info-box p{
+  margin: 0;
+}
+.modal-button{
+  text-decoration: none;
+  color:black;
+  border: 1px solid black!important;
+}
+.modal-button:hover{
+  color: #000!important;
+  text-decoration: none!important;
+
+}
+#procurement .modal-button:hover{
+  background-color: red;
+  color: WHITE;
+  text-decoration: none!important;
+
+}
+.jec17:hover{
+  background-color: black!important;
+  color: #000!important;
+}
+
+.Space{
+  width: fit-content;
+  margin: 0 AUTO!important;
+}
+/*  */
+/* visit us */
+#visit-us{
+  padding:5vh 0;
+
+}
+.visit-us-size{
+  height: 100%;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.visit-us-map{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.visit-us-form{
+  padding: 20px;
+  background-color: white;
+}
+.form-control{
+  background-color: #f7f7f7;
+}
+.visit-us-form button{
+  width: 100%;
+  background-color: maroon;
+}
+.visit-us-form button:hover{
+  background-color: #f7f7f7;
+  box-shadow: 0 0 20px red;
+  color:black;
+}
+.modal-header{
+  position: relative;
+}
+.close{
+  position: absolute;
+  right: 15px;
+}
+.modal-footer button:hover{
+  cursor: pointer;
+  background-color: #f7f7f7;
+  color: black;
+}
+.pad{
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.close:hover{
+  box-shadow:  0 0 10px red;
+  color:red;
+  cursor: pointer;
+}
+.
+
+/*  */
+#section1{
+  position: relative;
+  height: 60vh;
+  background: url(../images/munisipyo2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-blend-mode: darken;
+  background-position: bottom;
+  transition: 0.25s ease-out;
+}
+.black-filter{
+  width: 100%;
+  background-color: #000000bf!important;
+  position: relative;
+  height: 60vh;
+  background: url(../images/munisipyo2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-blend-mode: darken;
+  background-position: bottom;
+  transition: 0.25s ease-out;
+}
+.page-title{
+  margin-left: 15px;
+}
+.page-logo-center{
+  color:white;
+
+  position: absolute;
+  left: 10vw;
+  bottom: 10vh;
+}
+.red-bar{
+  width: 15px;
+  height: 50px;
+  background-color: #c10202;
+  background-size: 100% 50%;
+
+}
+.page-logo{
+  width: 150px;
+}
+
+#promotion{
+  padding: 5vh 0;
+}
+.list_promote{
+  list-style-type: none!important;
+  padding: 0;
+}
+.list_promote .active{
+  background-color: black;
+}
+.list_promote .active{
+  color: white;
+}
+.promote p {
+  margin:0;
+}
+.promote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  margin: auto;
+  text-decoration: none;
+  border: 1px solid black;
+}
+.promote:hover {
+  border: 3px solid red;
+}
+.list_promote a:hover{
+  color: red;
+
+}
+.list_promote a{
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+#procurement{
+  padding: 10vh 0 ;
+}
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: white;
+  height: 100%;
+}
+.sidebar p{
+  margin:0;
+  padding: 10px 0 ;
+}
+.sidebar a {
+  display: block;
+  color: black;
+
+  border: 1px solid black;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.sidebar a.active {
+  background-color: black;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: white;
+  border:3px solid red;
+  color: red;
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  .tabcontent {margin-left: 0;}
+
+#searchbar {
+  position: absolute;
+}
+#right {
+  display: none;
+}
+
+#left {
+  display: none;
+}
+}
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+.tables{
+  background-color: white;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+    height: 60vh;
+    width: 100%;
+}
+.procure{
+  width: 100%;
+  height: 40px;
+  display: block;
+
+  border-radius: 0;
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: #f7f7f7;
+
+
+}
+.title_procure{
+
+  width: 100%;
+  height: 40px;
+
+  border-radius: 0;
+  text-align: center;
+  margin: auto;
+  border: 1px solid black;
+  background-color: #f7f7f7;
+}
+
+.procure:hover{
+  border:3px solid red;
+  color: red;
+  box-shadow: none;
+  text-decoration: underline;
+}
+.title_procure .center{
+  font-weight: bold;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.center p{
+  margin: 0;
+}
+
+.no_pad{
+  padding:0;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #82000c;
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+
+.year{
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.year:hover{
+  color: red;
+  border:3px solid red;
+}
+.tabcontent{
+  width: 100%;
+  height: 60vh;
+}
+.year1{
+  width: 100%;
+
+}
+
+
+.justify-space-between{
+  justify-content: space-between;
+}
+/* footer */
+footer{
+  padding: 3vh 0 0 0;
+  border-top: 2px solid red;
+  background:linear-gradient(#f7f7f7,#ffbaba);
+}
+.fixed{
+  position: fixed;
+  bottom: 0;
+  z-index: 1111;
+}
+.add{
+  width: 95vw;
+  margin: auto;
+}
+.logo{
+  width: 100px;
+}
+.footer-final p{
+  margin-bottom: 10px;
+}
+.footer-final{
+  background-color: maroon;
+  font-size:9px;
+  padding:10px 0 1px 0;
+  color: white;
+}
+/* =====================================admin===========================*/
+.img-custom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+}
+.right-table{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.right-table{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.places-thumbnails{
+  transition: 0.5s;
+  text-align: justify;
+  width: 100%;
+  background: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.place-thumbnails:hover{
+  background:white;
+  box-shadow: 0 0 20px red;
+}
+.fit-content{
+  width: fit-content;
+}
+.pad2{
+  padding: 15px;
+}
+
+.tabcontent1{
+  border-left:2px solid red;
+  border-right:2px solid red;
+}
+
+.category{
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+#procurement .active{
+  color: red;
+  border:3px solid red;
+}
+.category:hover{
+  color: red;
+  border:3px solid red;
+}
+
+.bg-black{
+  background: black;
+  color:white;
+}
+.bg-black h4{
+  margin:auto;
+}
+.description1{
+flex-wrap: wrap;
+text-overflow: ellipsis;
+overflow: hidden;
+height: 100px;
+}
+.footer-barangay{
+  display:  flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: fit-content;
+  height: 200px;
+}
+.year1{
+  display: none;
+  overflow-x: hidden;
+  overflow-y:scroll;
+}
+.bold{
+  font-weight: bold;
+  margin: auto;
+  text-transform: uppercase;
+}
+.top-procure{
+  border:  2px solid black;
+}
+.top-procure1{
+border-left: 1px solid black;
+border-right: 1px solid black;
+}
+.text-custom{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.design{
+  text-decoration: none;
+
+}
+.design h5{
+  font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin:auto;
+
+}
+.overover{
+  border-top: 1px solid black;
+  height: 10px;
+}
+.jec10{
+  font-size: 12px;
+}
+#About{
+  padding-top: 50px;
+
+}
+.jec13{
+  padding-bottom: 50px;
+}
+.jec20{
+  padding-bottom: 50px;
+  box-shadow: -12px 12px 29px black;
+}
+.jec12{
+  text-align: justify;
+}
+.JEC21{
+text-indent: 50px;
+text-align: justify;
+}
+.center1{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.center2{
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.jecjec1{
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.year2{
+
+  overflow-x: hidden;
+  overflow-y:scroll;
+  width: 100%;
+  height: 60vh;
+}
+.cxz{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+}
+.modal-body iframe{
+  width: 100%!important;
+  height: 300px!important;
+}
+.jecjec2{
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.jecoy{
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: bold;
+  font-size: 12px;
+
+}
+.ordi:hover{
+background-color: red;
+color:white;
+}
+#result{
+  border:1px solid black;
+}
+.jecoy3{
+  align-items: center;
+
+}
+.marg p{
+  margin:auto!important;
+}
+.marg h6{
+  margin:auto!important;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+
+}
